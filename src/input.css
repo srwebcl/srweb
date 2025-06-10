@@ -1,0 +1,128 @@
+/* src/input.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Añadir estilos base personalizados si son necesarios */
+html {
+  scroll-behavior: smooth; /* Habilita desplazamiento suave para anclas # */
+}
+
+/* Definición de la animación para el carrusel */
+@layer utilities {
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Mover hacia la izquierda */
+  }
+  .animate-infinite-scroll {
+    animation: infinite-scroll 40s linear infinite;
+  }
+  .group:hover .group-hover\\:pause-animation {
+     animation-play-state: paused;
+  }
+
+   /* Nueva animación para el carrusel en sentido contrario */
+   @keyframes infinite-scroll-reverse {
+    from { transform: translateX(-50%); } /* Empezar desde la mitad (final del loop del otro sentido) */
+    to { transform: translateX(0%); } /* Mover hacia la derecha */
+  }
+   .animate-infinite-scroll-reverse {
+    animation: infinite-scroll-reverse 40s linear infinite; /* Misma duración que el otro para sincronización */
+  }
+
+
+  /* Clases para la animación de entrada al hacer scroll */
+  .section-fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Duración y timing del fade */
+  }
+  .section-fade-in.is-visible {
+    opacity: 1;
+  }
+}
+
+/* --- Estilos Adicionales para Header Dinámico --- */
+/* (Mantén los estilos que ya definiste aquí para el header.scrolled) */
+
+/* Estilos del header cuando se ha hecho scroll (clase 'scrolled' añadida por JS) */
+#main-header.scrolled {
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* Sombra Tailwind shadow-md */
+}
+
+/* Estilos del texto de los enlaces de navegación cuando el header ha scrolleado */
+/* Apunta a los enlaces dentro del menú principal visible en desktop */
+#main-header.scrolled .md\:flex a {
+  color: #374151; /* Tailwind text-gray-700 */
+}
+
+/* Estilos del texto de los enlaces de navegación cuando el header ha scrolleado al pasar el mouse */
+#main-header.scrolled .md\:flex a:hover {
+   color: #1f2937; /* Tailwind hover:text-gray-900 */
+}
+
+/* Mantener el color púrpura para el enlace activo, incluso cuando scrolleado */
+#main-header.scrolled .md\:flex a[aria-current="page"] {
+   color: #c084fc; /* Tailwind text-purple-400 */
+   border-bottom-color: #c084fc; /* Tailwind border-purple-400 */
+}
+
+
+/* Estilos del menú móvil cuando el header ha scrolleado */
+#mobile-menu.scrolled {
+    background-color: #ffffff; /* Fondo blanco para el menú móvil */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* Sombra Tailwind shadow-md */
+}
+
+/* Estilos del texto de los enlaces en el menú móvil cuando el header ha scrolleado */
+#mobile-menu.scrolled a {
+    color: #374151; /* Tailwind text-gray-700 */
+}
+
+/* Estilos del texto de los enlaces en el menú móvil al pasar el mouse cuando el header ha scrolleado */
+#mobile-menu.scrolled a:hover {
+    background-color: #f3f4f6; /* Tailwind hover:bg-gray-100 */
+    color: #1f2937; /* Tailwind hover:text-gray-900 */
+}
+
+/* Mantener el color y fondo para el enlace activo en el menú móvil cuando scrolleado */
+#mobile-menu.scrolled a[aria-current="page"] {
+   background-color: #4b5563; /* Tailwind bg-gray-700 */
+   color: #ffffff; /* Tailwind text-white */
+}
+
+
+/* Control de visibilidad de los logos basado en el scroll */
+/* (Estos estilos ya no son necesarios con el navbar Flowbite fijo) */
+/*
+#main-header #logo-white {
+    opacity: 1;
+}
+
+#main-header #logo-color {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+#main-header.scrolled #logo-white {
+    opacity: 0;
+}
+
+#main-header.scrolled #logo-color {
+    opacity: 1;
+}
+*/
+/* src/input.css */
+
+/* Ocultar el badge flotante de Google reCAPTCHA v3 */
+.grecaptcha-badge {
+  visibility: hidden !important; /* Usa !important si es necesario para asegurar que se oculte */
+  /* O también podrías usar:
+  opacity: 0 !important;
+  pointer-events: none !important;
+  */
+}
