@@ -10,3 +10,6 @@ build/
 
 # Archivos de entorno (si los usas)
 .env
+
+# Conexión FTP
+.vscode/
