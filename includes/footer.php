@@ -1,9 +1,6 @@
 <?php
-// includes/footer.php (MODIFICADO con Formulario de Contacto HubSpot Global)
 
-// Requerir la función base_url_path si no está disponible (idealmente ya lo está via header.php)
 if (!function_exists('base_url_path')) {
-   // Esta es una copia de la función en header.php, idealmente no se duplica.
    function base_url_path($path = '') {
        // *** IMPORTANTE: ASEGURA QUE BASE_URL ESTÁ DEFINIDO EN header.php ***
        $base = rtrim(BASE_URL, '/') . '/';

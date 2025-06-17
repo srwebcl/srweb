@@ -1,7 +1,4 @@
 <?php
-// includes/header.php (Modificado con estructura de Navbar tipo Flowbite)
-
-// Cabecera común para SRweb
 
 // Página activa para menú
 if (!isset($currentPage)) {

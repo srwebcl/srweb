@@ -21,14 +21,14 @@ if (!function_exists('base_url_path')) {
     <section id="hero" class="relative overflow-hidden text-white pt-24 pb-15 md:pt-30 md:pb-15">
         <div id="particles-js-hero" class="absolute inset-0 -z-9 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
              <p class="text-sm md:text-base font-semibold uppercase tracking-wider text-[#e2c32b] mb-2 opacity-0 hero-element"> Para Empresas, Profesionales y Especialistas en Servicios
             </p>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 opacity-0 hero-element">
+            <h1 class="text-5xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 opacity-0 hero-element">
                 Diseño de <span class="bg-gradient-to-r from-[#2f44ab] via-[#2baee2] to-[#2ba2e2]  text-transparent bg-clip-text">Páginas Web Profesionales</span> en Chile
             </h1>
             <p class="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 opacity-0 hero-element">
-                Desarrollamos <span class="underline decoration-sky-500 font-semibold text-[#e2c32b]">páginas web profesionales</span> que aumentan las ventas de tu negocio. Nuestras páginas web se enfocan en la conversión y son diseñadas especialmente para atraer <span class="underline decoration-sky-500 font-semibold  text-[#e2c32b]">clientes calificados desde Google.</span>
+                Desarrollamos Páginas Web Profesionales <span class="underline decoration-sky-500 font-semibold text-[#e2c32b]">que generan resultados</span>. Nuestras páginas web se enfocan en la conversión y son diseñadas especialmente para atraer <span class="underline decoration-sky-500 font-semibold  text-[#e2c32b]">clientes calificados desde Google.</span>
             </p>
             <div class="opacity-0 hero-element">
                 <a href="<?php echo base_url_path('contacto.php#formulario-contacto'); ?>" class="inline-block bg-blue-600 hover:bg-[#29235c] text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105">
@@ -57,7 +57,7 @@ if (!function_exists('base_url_path')) {
                     </div>
 
                     <a href="https://g.co/kgs/Y7FTn9Z" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-400 hover:text-blue-300 hover:underline">
-                        Lee nuestras 16 reseñas
+                        Lee nuestras 46 reseñas
                     </a>
 
                 </div>
